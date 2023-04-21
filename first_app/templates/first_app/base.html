@@ -1,0 +1,31 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ANIMAL</title>
+    <link rel="stylesheet" href="{% static 'first_app/css/bootstrap.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'first_app/css/fon.css' %}" type="text/css">
+    <link rel="icon" href="{% static 'first_app/img/logo_title.png' %}" type="image/jpg">
+</head>
+<body>
+<div class="box">
+    <div class="container">
+        <form class="form" method="post">
+            <div class="title">REGISTRATION</div>
+            {% csrf_token %}
+            {{form_up.as_p}}
+            <button type="submit" class="btn btn-primary neon">Confirm</button>
+        </form>
+        <form class="form" method="post">
+            <div class="title">LOG IN</div>
+            {% csrf_token %}
+            {{form_in.as_p}}
+            <button type="submit" class="btn btn-primary neon">Confirm</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
