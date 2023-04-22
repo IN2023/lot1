@@ -1,7 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
 from django import forms
-from .models import Goods, Brands
+from .models import Good, Brand
 
 
 class RegisterUserForm(UserCreationForm):
@@ -31,11 +31,11 @@ class GoodsForm(forms.ModelForm):
     price = forms.FloatField(label="Brand", widget=forms.NumberInput)
 
     class Meta:
-        model = Goods
+        model = Good
         fields = ("icon", "brand", "title", "number_of_servings", "price")
 
 
 class BrandsForm(forms.ModelForm):
     class Meta:
-        model = Brands
+        model = Brand
         fields = ("title", )

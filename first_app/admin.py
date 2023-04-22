@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.utils.safestring import mark_safe
 
-from .models import Goods, Brands
+from .models import Good, Brand
 
 
 class GoodsAdmin(admin.ModelAdmin):
@@ -12,5 +12,5 @@ class GoodsAdmin(admin.ModelAdmin):
         return mark_safe(f'<img src={obj.icon.url} width="50" height="90"')
 
 
-admin.site.register(Brands)
-admin.site.register(Goods, GoodsAdmin)
+admin.site.register(Brand)
+admin.site.register(Good, GoodsAdmin)

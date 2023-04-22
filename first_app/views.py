@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from .forms import RegisterUserForm, LoginUserForm
 from django.contrib import auth
 from django.views.decorators.csrf import csrf_exempt
-from .models import Brands
+from .models import Brand
 
 
 def funk_1(request):
@@ -11,7 +11,7 @@ def funk_1(request):
 
 
 def hom(request):
-    post = Brands.objects.all()
+    post = Brand.objects.all()
     objec = post
     return render(request, "first_app/home.html", {"post": objec})
 
