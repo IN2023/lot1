@@ -1,0 +1,20 @@
+{% extends 'first_app/base.html' %}
+
+{% block content %}
+<div class="box">
+    <div class="container">
+        <form class="form" method="post">
+            <div class="title">REGISTRATION</div>
+            {% csrf_token %}
+            {{form_up.as_p}}
+            <button type="submit" class="btn btn-primary neon">Confirm</button>
+        </form>
+        <form class="form" method="post">
+            <div class="title">LOG IN</div>
+            {% csrf_token %}
+            {{form_in.as_p}}
+            <button type="submit" class="btn btn-primary neon">Confirm</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

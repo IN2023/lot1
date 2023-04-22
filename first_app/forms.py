@@ -5,9 +5,9 @@ from .models import Goods, Brands
 
 
 class RegisterUserForm(UserCreationForm):
-    username = forms.EmailField(label="Email", widget=forms.EmailInput)
-    password1 = forms.CharField(label="Password", widget=forms.PasswordInput)
-    password2 = forms.CharField(label="Repeat the password", widget=forms.PasswordInput)
+    username = forms.EmailField(label="Email", widget=forms.EmailInput)  #  на екрані буде видно лише рядок вводу, без зайвих підсказок
+    password1 = forms.CharField(label="Password", widget=forms.PasswordInput)  #  на екрані буде видно лише рядок вводу, без зайвих підсказок
+    password2 = forms.CharField(label="Repeat the password", widget=forms.PasswordInput)  #  на екрані буде видно лише рядок вводу, без зайвих підсказок
 
     class Meta:
         model = User
@@ -16,11 +16,11 @@ class RegisterUserForm(UserCreationForm):
 
 class LoginUserForm(AuthenticationForm):
     username = forms.EmailField(label="Email", widget=forms.EmailInput)
-    password = forms.CharField(label="Password", widget=forms.PasswordInput)
+    # password = forms.CharField(label="Password", widget=forms.PasswordInput)
 
     class Meta:
         model = User
-        fields = ("username", "password")
+        fields = ("username", )
 
 
 class GoodsForm(forms.ModelForm):
