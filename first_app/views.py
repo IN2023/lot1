@@ -10,6 +10,7 @@ def funk_1(request):
     return render(request, "first_app/registration.html")
 
 
+@csrf_exempt
 def hom(request):
     post = Brand.objects.all()
     objec = post
