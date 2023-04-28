@@ -1,17 +1,16 @@
 {% extends 'first_app/base.html' %}
 
 {% block content %}
-<body>
-    <div class="box">
-        <div class="container">
-            <a href="{% url 'logout' %}"><button class="btn btn-primary neon">Log out</button></a>
-            <ul>
-                {% for p in post %}
-                <li>
-                    <h2 class="text">{{p.title}}</h2>
-                </li>
-                {% endfor %}
-            </ul>
-        </div>
+<div class="box">
+    <div class="container">
+        <a href="{% url 'logout' %}"><button class="btn btn-primary neon">Log out</button></a>
+        <ul>
+            {% for p in post %}
+            <li>
+                <h2 class="text">{{p.title}}</h2>
+            </li>
+            {% endfor %}
+        </ul>
     </div>
+</div>
 {% endblock %}

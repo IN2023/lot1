@@ -26,9 +26,9 @@ class LoginUserForm(AuthenticationForm):
 class GoodsForm(forms.ModelForm):
     icon = forms.ImageField(label="Image", widget=forms.FileInput)
     brand = forms.CharField(label="Brand", widget=forms.TextInput)
-    title = forms.CharField(label="Brand", widget=forms.TextInput)
+    title = forms.CharField(label="Title", widget=forms.TextInput)
     number_of_servings = forms.CharField(label="Brand", widget=forms.NumberInput)
-    price = forms.FloatField(label="Brand", widget=forms.NumberInput)
+    price = forms.FloatField(label="Price", widget=forms.NumberInput)
 
     class Meta:
         model = Good
